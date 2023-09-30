@@ -291,3 +291,8 @@ INIT_MANAGER = "systemd"
 # Add SELinux
 DISTRO_FEATURES:append = " acl xattr pam selinux"
 PREFERRED_PROVIDER_virtual/refpolicy ?= "refpolicy-mls"
+
+# Use environment variable settings
+SSTATE_DIR = "${ENV_VAR_SSTATE_DIR}"
+DL_DIR = "${ENV_VAR_DOWNLOADS_DIR}"
+DEFAULT_ENFORCING = "permissive"
